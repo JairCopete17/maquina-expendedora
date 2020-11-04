@@ -1,31 +1,28 @@
 ////////////////////////////////////////////////////////////////////////////////
-// Universidad: Universidad el Bosque
-// Integrantes del proyecto: Santiago Charry, Jair Copete, Juan Rozo.
-//
-// Fecha de CreaciÛn: 20/10/2020
-// Nombre del diseÒo: Maquina_Expendedora_De_Gaseosas.
-// Nombre del mÛdulo: vendingmachine.v
+// Fecha de Creaci√≥n: 20/10/2020
+// Nombre del dise√±o: Maquina_Expendedora_De_Gaseosas.
+// Nombre del m√≥dulo: vendingmachine.v
 // 
-// DescripciÛn:
-//		El modulo vendingmachine tendr· todo el funcionamiento de la maquina 
+// Descripci√≥n:
+//		El modulo vendingmachine tendr√° todo el funcionamiento de la maquina 
 // expendedora basado en los diagramas de estados hechos anteriormente.
 // 
 // Comentarios adicionales:
-//    selProducto tomar· los valores de:
-//			000[0] para cuando no hay selecciÛn,
+//    selProducto tomar√° los valores de:
+//			000[0] para cuando no hay selecci√≥n,
 //			001[1] para Seven Up,
 //			010[2] para Manzana y
 //			100[3] para Pepsi.
-// 	selDinero y selVueltas tomar· los valores de:
-//			0[0] para cuando no hay selecciÛn,
+// 	selDinero y selVueltas tomar√° los valores de:
+//			0[0] para cuando no hay selecci√≥n,
 //			1[1] para monedas de 100,
 //			2[2] para monedas de 200,
 //			4[3] para monedas de 500,
 //			8[4] para billetes de 1000,
 //			16[5] para billetes de 2000,
 //			32[6] para billetes de 5000.
-// 	selMensaje tomar· los valores de:
-//			00000[0] para cuando no hay selecciÛn,
+// 	selMensaje tomar√° los valores de:
+//			00000[0] para cuando no hay selecci√≥n,
 //			00001[1] para decir: Ingresar dinero: ,
 //			00010[2] para decir: Seleccionar producto: ,
 //			00100[3] para decir: No hay existencias.,
@@ -107,7 +104,7 @@ always @(posedge clk) begin
 			  end 
 					else state = 5;
 		  end
-        6: begin //DevoluciÛn de dinero
+        6: begin //Devoluci√≥n de dinero
 					case (stateO)
 						 0: //Inicio
 						 stateO = 1;
